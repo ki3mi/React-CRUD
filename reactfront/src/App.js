@@ -4,6 +4,7 @@ import './App.css';
 import CompShowProductos from './producto/ShowProducto';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CompCreateProducto from './producto/CreateProducto';
+import CompEditProducto from './producto/EditProducto';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element ={<CompShowProductos/>}/>
           <Route path='/create' element ={<CompCreateProducto/>}/>
+          <Route path='/edit/:id' element ={<CompEditProducto/>}/>
         </Routes>
       </BrowserRouter>
     </div>

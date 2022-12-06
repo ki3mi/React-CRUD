@@ -18,7 +18,7 @@ const CompShowProductos = () =>{
 
     //Procedimiento para eliminar los productos
     const deleteProducto = async (id)=>{
-        await axios.delete(`${URI}${id}`)
+        await axios.delete(`${URI}${id}`);
         getProductos()
     }
     return(
