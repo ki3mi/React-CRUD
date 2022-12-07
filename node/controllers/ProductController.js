@@ -1,12 +1,12 @@
 // importar el modelo
-import ProductosModel from "../models/ProductModel.js";
+import ProductoModel from "../models/ProductModel.js";
 
 // Metodos para el crud
 
 //Mostrar todos los productos
 export const getAllProductos =async (req, res) => {
     try {
-        const productos = await ProductosModel.findAll()
+        const productos = await ProductoModel.findAll()
         res.json(productos)
     } catch (error) {
         res.json({error: error.message})
@@ -15,7 +15,7 @@ export const getAllProductos =async (req, res) => {
 // Mostrar un producto
 export const getProducto = async (req, res)=>{
     try {
-        const producto = await ProductosModel.findAll({where:{id:req.params.id}
+        const producto = await ProductoModel.findAll({where:{id:req.params.id}
         })
         res.json(producto[0])
     } catch (error) {
@@ -25,7 +25,7 @@ export const getProducto = async (req, res)=>{
 //Agregar un producto
 export const createProducto = async (req, res) =>{
     try {
-        await ProductosModel.create(req.body)
+        await ProductoModel.create(req.body)
         res.json({
             "message":"!Producto agregado correctamente¡"
         })
@@ -36,7 +36,7 @@ export const createProducto = async (req, res) =>{
 //Actualizar producto
 export const updateProducto = async (req, res)=>{
     try {
-        await ProductosModel.update(req.body,{
+        await ProductoModel.update(req.body,{
             where: {id: req.params.id}
         })
         res.json({
@@ -49,7 +49,7 @@ export const updateProducto = async (req, res)=>{
 //eliminar un registro
 export const deleteProducto = async (req, res) => {
     try {
-        await ProductosModel.destroy({
+        await ProductoModel.destroy({
             where: {id: req.params.id}
         })
     } catch (error) {

@@ -3,11 +3,11 @@ import db from "../database/db.js";
 //Importamos equelize
 import { DataTypes } from "sequelize";
 
-const ProductosModel =  db.define('productos',{
+const ProductoModel =  db.define('productos',{
     nombre:{type: DataTypes.STRING},
     codigo:{type: DataTypes.STRING},
     seccion:{type: DataTypes.STRING},
-    imagen:{type: DataTypes.STRING}
+    imagen:{type: DataTypes.STRING},
 })
 
-export default ProductosModel
+export default ProductoModel

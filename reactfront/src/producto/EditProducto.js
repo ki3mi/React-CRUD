@@ -36,8 +36,8 @@ const CompEditProducto = () =>{
         // setimagen(res.data.imagen)
     }
     return(
-        <div>
-            <h3>Editar producto</h3>
+        <div className="container">
+            <h3>Editar producto</h3><br/>
             <form onSubmit={update}>
                 <div className="mb-3">
                     <label className="form-label">Código: </label>
