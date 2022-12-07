@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 //importamos los componentes
 import CompShowProductos from './producto/ShowProducto';
@@ -9,9 +8,6 @@ import CompEditProducto from './producto/EditProducto';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />        
-      </header>
       <BrowserRouter>
         <Routes>
           <Route path='/' element ={<CompShowProductos/>}/>
